@@ -2,13 +2,12 @@
 
 #docker #php #docker-example 
 
-I needed to run an old PHP project; The documentation of it suggested an old version of Vagrant with some hacky modifications.  I tried that but it did not worked as expected. I also tried the newest version of it but I encountered similar issues. 
+I needed to run an old PHP project; The documentation of it suggested an old version of Vagrant with some hacky modifications. I tried that, but it did not work as expected. I also tried the newest version of it, but I encountered similar issues. 
+Solving these issues was getting out of scope because this requirement was so a non-technical person could run the project the easiest way possible. By this point, [[docker]] was the obvious option.
 
-[[docker]] was the obvious option to run it, but I needed a way to do it in a simple way, since I only required to do this to allow a non-technical person to run the project in the most easy way possible.
+I found a pretty easy way to run a PHP project in docker in this article: [Setup a basic Local PHP Development Environment in Docker](https://dev.to/truthseekers/setup-a-basic-local-php-development-environment-in-docker-kod)
 
-I found an pretty easy way to do it in this article [Setup a basic Local PHP Development Environment in Docker](https://dev.to/truthseekers/setup-a-basic-local-php-development-environment-in-docker-kod)
-
-This was the smallest version of the [[docker-compose]] file that I came up with was as follows:
+The following configuration was the tiniest version of the [[docker-compose]] file that I came up with:
 
 ```yaml
 version: "3.1"
@@ -35,7 +34,8 @@ services:
 
 ```
 
-Because I needed to run some commands I had to create the following [[docker-file]]
+Because I needed to run some commands, I had to create the following [[docker-file]]
+
 
 ```dockerfile
 # Docker image with configured apache
