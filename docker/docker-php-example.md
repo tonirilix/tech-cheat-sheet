@@ -51,3 +51,10 @@ RUN a2enmod rewrite
 ```
 
 
+---
+
+## Symphony example
+
+After some digging, I stumbled upon this different repo that I did not have time to check, [Symfony Docker Compose](https://github.com/kasteckis/symfony-docker-compose)
+
+Seems worth giving it a try.
